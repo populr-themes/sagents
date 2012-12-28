@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Name of yur theme -->
+	<title>My New Theme</title>
+	<!-- Add any styles your theme requires here -->
+	<link rel="stylesheet/less" type="text/css" href="styles/main.less">
+	<!-- This script loads the Populr theming engine. Populr will automatically
+	remove it at runtime. -->
+	<script src="http://populr.me/assets/developers/themer.js"></script>
+	<!-- Add any javscript your theme requires here -->
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+	<!-- Put your theme's inside this script tag. The script tag will
+	prevent issues with quote escaping and invalid markup. -->
+	<script id="theme" type="text/x-handlebars-template">
+
+	<div class="outertemplate">
+
+		<div class="headercurve"><img src="images/logo.png" /></div>			 
+		<div class="innertemplate">
+
+			<div class="topheader">
+
+				<div class="toplink">join our community<br />
+					<a href="#"><img src="images/iconTwitter.png" /></a>
+					<a href="#"><img src="images/iconFacebook.png" /></a>
+					<a href="#"><img src="images/iconLinkedin.png" /></a>
+				</div>
+
+				<h1 class="solotitle">Sagents</h1>
+
+				<div class="shade_effect"></div>
+
+			</div>
+
+			{{{title}}}
+
+			<div class="leftcontainer">
+
+				{{#region "columnizer" id="main-region" max_cols="2" dummy_content="T-1|T-1,I-1|I-5|V-1|D-1|D-2,V-1|E-1|E-1,E-1" max_auto_assets="0"}}
+
+					{{#asset "text" size="1"}}
+						{{{title}}}
+						<div class="content">
+						{{{body}}}
+						</div>
+					{{/asset}}
+
+					{{#asset "text" size="2"}}
+						{{{title}}}
+						<div class="content">
+						{{{body}}}
+						</div>
+					{{/asset}}
+
+					{{#asset "imagegroup" size="1"}}
+						{{{title}}}
+						<div class="content">
+						{{{imageslider images width="540" height="304"}}}
+						</div>
+						{{{description}}}
+					{{/asset}}
+
+					{{#asset "imagegroup" size="2"}}
+						{{{title}}}
+						<div class="content">
+						{{{imageslider images width="260" height="195"}}}
+						</div>
+						{{{description}}}
+					{{/asset}}
+
+					{{#asset "videogroup" size="1"}}
+						{{{title}}}
+						<div class="content">
+						{{{videoplayer contents width="540" height="304" resolution="large"}}}
+						</div>
+						{{{description}}}
+					{{/asset}}
+
+					{{#asset "videogroup" size="2"}}
+						{{{title}}}
+						<div class="content">
+						{{{videoplayer contents width="260" height="195" resolution="medium"}}}
+						</div>
+						{{{description}}}
+					{{/asset}}
+
+					{{#asset "documentgroup" size="1"}}
+						{{{title}}}
+						{{{description}}}
+						<div class="content">
+						<ul class="documents">
+						{{#documents}}
+						<li><a href="{{original_url}}">download</a>{{title}} <span class="file-extension file-extension-{{extension}}">{{extension}},</span> <span class="filesize">{{{format_file_size source_file_size}}}</span></li>
+						{{/documents}}
+						</ul>
+						</div>
+					{{/asset}}
+
+					{{#asset "documentgroup" size="2"}}
+						{{{title}}}
+						{{{description}}}
+						<div class="content">
+						<ul class="documents">
+						{{#documents}}
+						<li>{{title}}<div><span class="file-extension file-extension-{{extension}}">{{extension}},</span> <span class="filesize">{{{format_file_size source_file_size}}}</span></div><a href="{{original_url}}">download</a></li>
+						{{/documents}}
+						</ul>
+						</div>
+					{{/asset}}
+
+					{{#asset "embedgroup" size="1" width="540"}}
+						{{{title}}}
+						<div class="content">
+						{{#embeds}}
+						<div class="embed">{{{html}}}</div>
+						{{/embeds}}
+						</div>
+						{{{description}}}
+					{{/asset}}
+
+					{{#asset "embedgroup" size="2" width="260"}}
+						{{{title}}}
+						<div class="content">
+						{{#embeds}}
+						<div class="embed">{{{html}}}</div>
+						{{/embeds}}
+						</div>
+						{{{description}}}
+					{{/asset}}
+
+				{{/region}}
+
+			</div>
+
+			<div class="rightcontainer">
+
+				{{#region "packer" id="side-region" columns="1" column_width="250" gutter_width="0" dummy_content="I-3-s,V-1-s,D-4-s,E-1-s,T-1-s" max_auto_assets="0" sizes="s" default_size="s"}}
+
+					{{#asset "text" size="s"}}
+						<div class="content">
+						{{{title}}}			
+						{{{body}}}
+						</div>
+					{{/asset}}
+
+					{{#asset "documentgroup" size="s"}}
+						<div class="content">
+						{{{title}}}
+						{{{description}}}
+						<ul class="documents">
+						{{#documents}}
+						<li>{{title}}<br /><span class="file-extension file-extension-{{extension}}">{{extension}}</span>, <span class="filesize">{{{format_file_size source_file_size}}}</span><br /><a href="{{original_url}}">download</a></li>
+						{{/documents}}
+						</ul>
+						</div>
+					{{/asset}}
+
+					{{#asset "embedgroup" size="s" width="220"}}
+						{{#embeds}}
+						<div class="embed">{{{html}}}</div>
+						{{/embeds}}
+						<div class="content">
+						{{{title}}}
+						{{{description}}}
+						</div>
+					{{/asset}}
+
+					{{#asset "imagegroup" size="s"}}
+						{{{imageslider contents width="220" height="140"}}}	
+						<div class="content">			
+						{{{title}}}
+						{{{description}}}
+						</div>
+					{{/asset}}
+
+					{{#asset "videogroup" size="s"}}
+						{{{videoplayer contents width="220" height="140" resolution="small"}}}
+						<div class="content">				
+						{{{title}}}
+						{{{description}}}
+						</div>
+					{{/asset}}
+
+				{{/region}}
+
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="footer">
+				<h4>Sagents</h4>
+				<h6>Copyright &copy; 2012 Sagents.com</h6>
+			</div>
+
+		</div>
+
+	</div>
+
+	</script>
+
+</body>
+</html>
