@@ -5,7 +5,7 @@
 	<!-- Name of yur theme -->
 	<title>My New Theme</title>
 
-	<palette class="palette-default" name="Sagents palette" preview="#01a9d8,#0C3443">
+<!--	<palette class="palette-default" name="Sagents palette" preview="#9BBF27,#5999E3"> -->
 
 	<!-- Add any styles your theme requires here -->
 	<link rel="stylesheet/less" type="text/css" href="styles/main.less">
@@ -23,15 +23,15 @@
 
 	<div class="outertemplate">
 
-		<div class="headercurve"><img src="images/logo.png" /></div>			 
+		<div class="headercurve"><div id="logo"></div></div>			 
 		<div class="innertemplate">
 
 			<div class="topheader">
 
-				<div class="toplink">join our community<br />
-					<a href="#"><img src="images/iconTwitter.png" /></a>
-					<a href="#"><img src="images/iconFacebook.png" /></a>
-					<a href="#"><img src="images/iconLinkedin.png" /></a>
+				<div class="toplink">Join our community<br />
+					<a href="http://twitter.com/SagentsInc" target="_top"><div id="twitter_icon"></div></a>
+					<a href="http://www.facebook.com/sagents" target="_top"><div id="facebook_icon"></div></a>
+					<a href="http://www.linkedin.com/groups?gid=3607275&home=" target="_top"><div id="linkedin_icon"></div></a>
 				</div>
 
 				<h1 class="solotitle">Sagents</h1>
@@ -44,7 +44,7 @@
 
 			<div class="leftcontainer">
 
-				{{#region "columnizer" id="main-region" max_cols="2" dummy_content="T-1|T-1,I-1|I-5|V-1|D-1|D-2,V-1|E-1|E-1,E-1" max_auto_assets="0"}}
+				{{#region "columnizer" id="main-region" max_cols="2" dummy_content="T-1|T-1,I-2|I-2|V-2|V-2,D-2|D-2|E-2|E-1,E-2" max_auto_assets="0"}}
 
 					{{#asset "text" size="1"}}
 						{{{title}}}
