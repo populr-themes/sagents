@@ -98,7 +98,7 @@
 						<div class="content">
 						<ul class="documents">
 						{{#documents}}
-						<li><a href="{{original_url}}">download</a>{{title}} <span class="file-extension file-extension-{{extension}}">{{extension}},</span> <span class="filesize">{{{format_file_size source_file_size}}}</span></li>
+						<li><a href="{{original_url}}">download</a>{{title}} &nbsp;<span class="file-extension file-extension-{{extension}}">{{extension}},</span> <span class="filesize">{{{format_file_size source_file_size}}}</span></li>
 						{{/documents}}
 						</ul>
 						</div>
@@ -110,7 +110,7 @@
 						<div class="content">
 						<ul class="documents">
 						{{#documents}}
-						<li>{{title}}<div><span class="file-extension file-extension-{{extension}}">{{extension}},</span> <span class="filesize">{{{format_file_size source_file_size}}}</span></div><a href="{{original_url}}">download</a></li>
+						<li>{{title}} &nbsp;<div><span class="file-extension file-extension-{{extension}}">{{extension}},</span> <span class="filesize">{{{format_file_size source_file_size}}}</span></div><a href="{{original_url}}">download</a></li>
 						{{/documents}}
 						</ul>
 						</div>
@@ -142,7 +142,7 @@
 
 			<div class="rightcontainer">
 
-				{{#region "packer" id="side-region" columns="1" column_width="250" gutter_width="0" dummy_content="I-3-s,V-1-s,D-4-s,E-1-s,T-1-s" max_auto_assets="0" sizes="s" default_size="s"}}
+				{{#region "packer" id="side-region" columns="1" column_width="250" gutter_width="20" dummy_content="I-3-s,V-1-s,D-4-s,E-1-s,T-1-s" max_auto_assets="0" sizes="s" default_size="s"}}
 
 					{{#asset "text" size="s"}}
 						<div class="content">
